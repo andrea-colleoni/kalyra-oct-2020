@@ -1,0 +1,27 @@
+Esercizio GIT
+
+Lavorare un un branch con il proprio cognome.
+1)
+- creare una directory "contenuto"
+- copiare file.txt nella dir contenuto
+- modificare il file
+- committare la modifica
+2)
+- spostarsi su main
+- modificare il file.txt aggiungendo dettagli a piacere
+- committare la modifica
+- fare merge delle modifiche dal branch con il vostro cognome
+3)
+- spostarsi sul branch
+- fare rebase del master
+- modificare file.txt nella root directory rimuovendo l'ultima riga
+- committare le modifiche
+- spostarsi sul main
+- modificare il file.txt aggiungendo una riga
+- committare le modifiche
+- fare merge dal branch
+- risolvere i conflitti
+- committare la merge commit
+- spostarsi sul branch 
+- fare rebase del master
+- taggare con v1.0 il branch
