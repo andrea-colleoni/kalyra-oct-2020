@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>it.kaleyra</groupId>
 	<artifactId>maven-parent</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>pom</packaging>
 	<organization>
 		<name>Kaleyra</name>
@@ -15,6 +15,37 @@
 		<spring.version>5.2.9.RELEASE</spring.version>
 		<poi.version>4.1.2</poi.version>
 	</properties>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-remote-snapshots</id>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>		
+		</snapshotRepository>
+		<repository>
+			<id>nexus-remote-deploy</id>
+			<url>http://localhost:8081/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>	
+	<repositories>
+		<repository>
+			<id>nexus-remote</id>
+			<url>http://localhost:8081/repository/maven-public/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+	</repositories>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.2.0</version>
+			</plugin>
+		</plugins>
+	</reporting>
 	<build>
 		<plugins>
 			<plugin>
