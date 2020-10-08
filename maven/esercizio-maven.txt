@@ -1,0 +1,18 @@
+Esercizio Maven
+
+1)
+- creare un progetto con maven di tipo POM (parent); artifact: esercizio-parent
+- impostare le seguenti proprietà:
+	- java.version=1.8
+	- log4j.version=1.2.17
+- impostare le proprietà di default del compiler (source e target) alla version specificata dalla proprietà java.version
+- aggiungere management di dpiendenze in modo che la versione di log4j sia locked a quella specificata nella proprietà log4j.version
+- impostare il maven-jar-plugin in modo da includere il classPath nel manifest del jar
+2)
+- creare un progetto (non modulo) che abbia come parent esercizio-parent
+- aggiungere una dependency a log4j, rispettando il management imposto dal parent
+- fare l'override della versione di java, portandolo a 1.9
+- provare una compilazione (compile) e un package (package).
+3)
+- creare un progetto modulo (figlio di esercizio-parent)
+- provare l'installazione del progetto esercizio-parent (mvn install) e verificare che avvenga l'install nella local cache anche di questo modulo
