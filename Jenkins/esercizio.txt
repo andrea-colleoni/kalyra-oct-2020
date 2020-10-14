@@ -1,0 +1,18 @@
+Build con Jenkins
+
+1)
+Creare un nuovo progetto Spring Boot (Java + Maven) con https://start.spring.io/
+	- starter web
+
+2)
+Creare un repository Git (locale con file:///, oppure sun un provider Git, es: github)
+Colleagre il repo al progetto, committare e pushare una prima versione vuota del progetto Spring Boot
+
+3)
+Creare un vuovo job Jenkins per buildare e testare il progetto, con le seguenti caratteristiche:
+- trigger: da git (poll) ogni minuto
+- clean e install del progetto con esecuzione dei tests
+
+4)
+- Attivare la build, pushando una nuova versione del progetto con il test che fallisce e far fallire la build
+- Correggere l'unit test in modo che sia succesful, pushare e veririfcare che la build sia stabile
