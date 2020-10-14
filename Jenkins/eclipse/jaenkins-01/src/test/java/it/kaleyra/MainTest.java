@@ -8,7 +8,9 @@ public class MainTest {
 
 	@Test
 	public void test() {
-		assertTrue(System.currentTimeMillis() % 2 == 0);
+		long millis = System.currentTimeMillis();
+		boolean result = millis % 2 == 0;
+		assertTrue("millis:" + millis  + ", result: " + result, result);
 	}
 
 }
