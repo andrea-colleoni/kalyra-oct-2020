@@ -8,7 +8,7 @@ public class MainTest {
 
 	@Test
 	public void test() {
-		assertTrue(true);
+		assertTrue(System.currentTimeMillis() % 2 == 0);
 	}
 
 }
