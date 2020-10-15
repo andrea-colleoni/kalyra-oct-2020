@@ -1,5 +1,4 @@
 Pipeline e Ansible
-
 1)
 Creare un nuovo progetto Spring Boot (Java + Maven) con https://start.spring.io/
 	- starter web
@@ -13,12 +12,12 @@ Creare una cartella Progetti-Corso
 Nella cartella, creare un vuovo progetto Pipeline Jenkins per buildare e testare e deployare il progetto, con le seguenti caratteristiche:
 Build di collaudo:
 - trigger: da git (poll) ogni minuto, dal ramo "collaudo"
-- pipeline con: checkout, aggiunta build info, compilazione e test (maven), deploy su server group collaudo con ansible usando i moduli:
+- pipeline con: checkout del ramo "collaudo", aggiunta build info, compilazione e test (maven), deploy su server group collaudo con ansible usando i moduli:
 - yum per installare jdk
 - "copy" per copiare i file
 - shell per lanciare java -jar "ApplicazioneSpringBoot")
 
 Build di produzione:
-trugger: attivato dalla succesful build del collaudo e soggetto a una promotion manuale
-- pipeline con: checkout, aggiunta build info, compilazione e test (maven), tag su git e deploy su server group collaudo con ansible (stesso playbook definito sopra)
+trigger: attivato dalla succesful build del collaudo e soggetto a una promotion manuale
+- pipeline con: checkout del ramo "produzione", aggiunta build info, compilazione e test (maven), tag su git e deploy su server group collaudo con ansible (stesso playbook definito sopra)
 
